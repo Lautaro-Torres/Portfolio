@@ -1,0 +1,64 @@
+#hobbie {
+  height: 100vh;
+  background-image: url("/src/assets/purpleFlow.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 25px 100px 100px rgb(10, 10, 10) inset;
+}
+
+.container-hobbie {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(phone) {
+    padding-top: 30rem;
+  }
+}
+
+.text-hobbie {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+
+  @include respond(phone) {
+    font-size: 0.5em;
+  }
+}
+
+h1 {
+  margin-bottom: 100px;
+}
+
+.fa-solid:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.5);
+}
+
+.fa-brands:hover {
+  transition: 1s ease-in-out;
+  transform: scale(1.5);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: 1s ease-in-out;
+}
+
+a,
+a:hover {
+  transform: scale(40ps);
+  color: inherit;
+}
+
+a + a {
+  margin-left: 100px;
+
+  @include respond(phone) {
+    margin-left: 50px;
+  }
+}

@@ -1,0 +1,62 @@
+#contact-video {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include respond(tab-land) {
+      object-position: 25%;
+      clip-path: none;
+      margin-top: 0;
+      -webkit-clip-path: none;
+    }
+  }
+
+  .contact-wrapper {
+    display: flex;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 3.2rem;
+    padding: 0 2rem;
+    backface-visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-icons {
+      margin-top: 2.5rem;
+      transition: 1s ease-in-out;
+
+      .fa-brands:hover {
+        transition: 1s ease-in-out;
+        transform: scale(1.5);
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        transition: 1s ease-in-out;
+      }
+      a+a {
+        margin-left: 20px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
